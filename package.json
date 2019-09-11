@@ -1,0 +1,44 @@
+{
+	"name": "ui5-deployer",
+	"version": "0.0.1",
+	"description": "UI5 Deployer",
+	"author": "Mauricio Lauffer",
+	"license": "Apache-2.0",
+	"main": "lib/index.js",
+	"files": [
+		"lib/**"
+	],
+	"keywords": [
+		"openui5",
+		"sapui5",
+		"ui5",
+		"deploy",
+		"deployment",
+		"deployer",
+		"development",
+		"tool"
+	],
+	"scripts": {},
+	"dependencies": {
+		"@ui5/fs": "^1.1.2",
+		"@ui5/logger": "^1.0.1",
+		"isbinaryfile": "^4.0.2",
+		"request": "^2.88.0",
+		"xmldoc": "^1.1.2"
+	},
+	"devDependencies": {
+		"eslint": "^6.3.0",
+		"eslint-config-google": "^0.14.0"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/mauriciolauffer/ui5-deployer.git"
+	},
+	"bugs": {
+		"url": "https://github.com/mauriciolauffer/ui5-deployer/issues"
+	},
+	"engines": {
+		"node": ">= 8.5",
+		"npm": ">= 5"
+	}
+}
