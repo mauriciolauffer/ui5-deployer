@@ -1,5 +1,5 @@
 # Introduction 
-This is an experimental module integrated with ui5-tooling to deploy Fiori/UI5 apps to SAP environments. This module is under development and it is not part of the official SAP ui5-tooling. For now, it uses a custom version of ui5-cli for deployment capabilities.
+This is an experimental module integrated with ui5-tooling to deploy Fiori/UI5 apps to SAP environments. This module is under development and it is not part of the official SAP ui5-tooling. For now, it uses a custom version of ui5-cli for deployment capabilities. It's heavily inspired on ui5-build. 
 
 It's an experimental module, don't use it for real! There's no NPM module for it, you consume it from GitHub only.
 
@@ -35,6 +35,20 @@ deployer:
   credentials:
     username: MyUsername
     password: MyPassword
+```
+
+You have the option to use all parameters as is from the ui5.yaml file or overwrite few of them when executing ui5-cli..
+
+You can overwrite: abapRepository.transportRequest || credentials.username || credentials.password
+
+```shell script
+$ ui5 deploy
+```
+```shell script
+$ ui5 deploy --transport-request=ABAPDK99999
+```
+```shell script
+$ ui5 deploy --username=MyUsername --password=MyPassword
 ```
 
 You can see an example here:
