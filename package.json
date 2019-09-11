@@ -24,6 +24,7 @@
 		"@ui5/logger": "^1.0.1",
 		"isbinaryfile": "^4.0.2",
 		"request": "^2.88.0",
+		"ui5-cli-deployer": "git+https://github.com/mauriciolauffer/ui5-cli-deployer.git",
 		"xmldoc": "^1.1.2"
 	},
 	"devDependencies": {
