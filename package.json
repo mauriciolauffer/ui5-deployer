@@ -18,7 +18,9 @@
 		"development",
 		"tool"
 	],
-	"scripts": {},
+	"scripts": {
+		"lint": "eslint ./lib"
+	},
 	"dependencies": {
 		"@ui5/fs": "^1.1.2",
 		"@ui5/logger": "^1.0.1",
@@ -28,7 +30,7 @@
 		"xmldoc": "^1.1.2"
 	},
 	"devDependencies": {
-		"eslint": "^6.3.0",
+		"eslint": "^6.4.0",
 		"eslint-config-google": "^0.14.0"
 	},
 	"repository": {

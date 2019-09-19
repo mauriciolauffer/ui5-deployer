@@ -1,0 +1,13 @@
+env:
+  node: true
+  es6: true
+parserOptions:
+  ecmaVersion: 8
+extends:
+  - eslint:recommended
+  - google
+rules:
+  max-len: 0
+  no-console: error
+  require-jsdoc: 0
+  valid-jsdoc: 0
