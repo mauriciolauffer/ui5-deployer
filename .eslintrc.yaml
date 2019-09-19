@@ -9,5 +9,3 @@ extends:
 rules:
   max-len: 0
   no-console: error
-  require-jsdoc: 0
-  valid-jsdoc: 0
