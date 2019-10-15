@@ -1,4 +1,4 @@
-# Introduction 
+# Introduction
 
 This is an experimental module integrated with ui5-tooling to deploy Fiori/UI5 apps to SAP environments. This module is under development and it is not part of the official SAP ui5-tooling. For now, it uses a custom version of ui5-cli for deployment capabilities. It's heavily inspired on ui5-build.
 
@@ -39,11 +39,11 @@ The ui5.yaml file from your Fiori/UI5 application/library should have a new sect
 - `sapCloudPlatform` (optional): SAP Cloud Platform target
   - `neo` (optional): NEO environment target
     - `account`: SAP CP NEO Account
-    - `cliPath` (optional):  In case neo CLI is not global, inform the path to it. https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/7613dee4711e1014839a8273b0e91070.html
+    - `cliPath` (optional):  In case neo CLI is not global, inform the path to it. <https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/7613dee4711e1014839a8273b0e91070.html>
   - `cloudFoundry` (optional): CF environment target
     - `org`: Organization
     - `space`: Space
-    - `cliPath` (optional): In case cf CLI is not global, inform the path to it. https://docs.cloudfoundry.org/cf-cli
+    - `cliPath` (optional): In case cf CLI is not global, inform the path to it. <https://docs.cloudfoundry.org/cf-cli>
 - `abapRepository` (optional): SAP NetWeaver ABAP Repository target
   - `client`: SAP client/mandt
   - `language`: SAP Logon Language
@@ -143,11 +143,12 @@ $ ui5 deploy --username=MyUsername --password=MyPassword
 ```
 
 You can see an example here:
-https://github.com/mauriciolauffer/ui5-deployer-app-test
+<https://github.com/mauriciolauffer/ui5-deployer-app-test>
 
-The modified ui5-cli can be found here: https://github.com/mauriciolauffer/ui5-cli-deployer
+The modified ui5-cli can be found here: <https://github.com/mauriciolauffer/ui5-cli-deployer>
 
 TODO: Needs more details
 
 ## Build and Test
+
 TODO: Describe and show how to build your code and run the tests.
