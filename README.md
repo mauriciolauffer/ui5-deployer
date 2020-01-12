@@ -51,6 +51,7 @@ The ui5.yaml file from your Fiori/UI5 application/library should have a new sect
   - `package`: ABAP Package
   - `bspApplication`: BSP Application name
   - `bspApplicationText`: BSP Application description
+  - `skipAdtValidations`: Does not validate the existence of some ADT APIs, ABAP packages and Transport Requests used during deployment. Used for older ABAP versions where these ADT APIs are not available.
 
 ## SAP Netweaver: ABAP server
 
@@ -77,6 +78,7 @@ deployer:
     package: ZMYPACKAGE
     bspApplication: ZDEPLOYAPP001
     bspApplicationText: TEST DEPLOY APP x1
+    skipAdtValidations: true
 ```
 
 ## SAP Cloud Platform: NEO environment
