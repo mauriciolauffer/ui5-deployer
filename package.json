@@ -1,6 +1,6 @@
 {
 	"name": "ui5-deployer",
-	"version": "0.0.1",
+	"version": "0.1.0",
 	"description": "UI5 Deployer",
 	"author": "Mauricio Lauffer",
 	"license": "Apache-2.0",
