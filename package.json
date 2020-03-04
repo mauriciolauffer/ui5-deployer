@@ -19,7 +19,9 @@
 		"tool"
 	],
 	"scripts": {
-		"lint": "eslint ./lib"
+		"test": "npm run lint",
+		"lint": "eslint lib",
+		"lint:fix": "eslint lib --fix"
 	},
 	"dependencies": {
 		"@ui5/fs": "^1.1.2",
@@ -31,6 +33,7 @@
 	},
 	"devDependencies": {
 		"@types/node": "^13.7.7",
+		"@types/request": "^2.48.4",
 		"eslint": "^6.8.0",
 		"eslint-config-mlauffer-nodejs": "0.0.1"
 	},
