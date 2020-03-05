@@ -62,7 +62,10 @@ metadata:
 type: application
 deployer:
   type: sap-netweaver
-  sourcePath: /dist # Path to the project to be deployed
+  sourcePath: dist/ # Path to the project to be deployed
+  resources:
+    excludes:
+      - "dist/path_to_excluded/**"
   connection:
     url: https://dev.my-sap-server.com
     proxy: https://my.proxy.com:43000
