@@ -32,7 +32,7 @@
 		"xmldoc": "^1.1.2"
 	},
 	"devDependencies": {
-		"@types/node": "^13.7.7",
+		"@types/node": "^13.9.4",
 		"@types/request": "^2.48.4",
 		"eslint": "^6.8.0",
 		"eslint-config-mlauffer-nodejs": "0.0.1"
