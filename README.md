@@ -51,7 +51,7 @@ The ui5.yaml file from your Fiori/UI5 application/library should have a new sect
   - `package`: ABAP Package
   - `bspApplication`: BSP Application name
   - `bspApplicationText`: BSP Application description
-  - `skipAdtValidations`: Does not validate the existence of some ADT APIs, ABAP packages and Transport Requests used during deployment. Used for older ABAP versions where these ADT APIs are not available.
+  - `skipAdtValidations` (optional): Does not validate the existence of some ADT APIs, ABAP packages and Transport Requests used during deployment. Used for older ABAP versions where these ADT APIs are not available. Must be `true` || `false`. Default is `false`.
 
 ## SAP Netweaver: ABAP server
 
@@ -136,15 +136,15 @@ You have the option to use all parameters as is from the ui5.yaml file or overwr
 You can overwrite: `abapRepository.transportRequest` || `credentials.username` || `credentials.password`
 
 ```shell script
-$ ui5 deploy
+$ ui5-deployer deploy
 ```
 
 ```shell script
-$ ui5 deploy --transport-request=ABAPDK99999
+$ ui5-deployer deploy --transport-request=ABAPDK99999
 ```
 
 ```shell script
-$ ui5 deploy --username=MyUsername --password=MyPassword
+$ ui5-deployer deploy --username=MyUsername --password=MyPassword
 ```
 
 You can see an example here:
