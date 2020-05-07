@@ -24,15 +24,15 @@
 		"lint:fix": "eslint lib --fix"
 	},
 	"dependencies": {
-		"@ui5/fs": "^1.1.2",
-		"@ui5/logger": "^1.0.2",
-		"isbinaryfile": "^4.0.4",
+		"@ui5/fs": "^2.0.1",
+		"@ui5/logger": "^2.0.0",
+		"isbinaryfile": "^4.0.6",
 		"request": "^2.88.2",
 		"ui5-cli-deployer": "git+https://github.com/mauriciolauffer/ui5-cli-deployer.git",
 		"xmldoc": "^1.1.2"
 	},
 	"devDependencies": {
-		"@types/node": "^13.9.4",
+		"@types/node": "^13.13.5",
 		"@types/request": "^2.48.4",
 		"eslint": "^6.8.0",
 		"eslint-config-mlauffer-nodejs": "0.0.1"
@@ -45,7 +45,7 @@
 		"url": "https://github.com/mauriciolauffer/ui5-deployer/issues"
 	},
 	"engines": {
-		"node": ">= 8.5",
+		"node": ">= 10",
 		"npm": ">= 5"
 	}
 }
