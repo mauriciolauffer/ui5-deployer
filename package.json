@@ -1,6 +1,6 @@
 {
 	"name": "ui5-deployer",
-	"version": "0.2.0",
+	"version": "0.2.1",
 	"description": "UI5 Deployer",
 	"author": "Mauricio Lauffer",
 	"license": "Apache-2.0",
@@ -28,8 +28,8 @@
 		"@ui5/logger": "^2.0.0",
 		"isbinaryfile": "^4.0.6",
 		"request": "^2.88.2",
-    "xmldoc": "^1.1.2",
-    "ui5-deployer-cli": "2.2.2"
+		"xmldoc": "^1.1.2",
+		"ui5-deployer-cli": "2.2.2"
 	},
 	"devDependencies": {
 		"@types/node": "^13.13.5",
