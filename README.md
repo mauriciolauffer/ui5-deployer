@@ -24,8 +24,9 @@ This is the basic setup for ui5-deployer shared across all remote system options
 
 The ui5.yaml file from your Fiori/UI5 application/library should have a new section called **deployer**. Deployer section has the following parameters:
 
-#### *deployer*
+#### ui5.yaml file for *deployer*
 
+`deployer`: root attribute, all deployer details go under it
 - `type`: Indicates the remote system where the project will be deployed. Must be `sap-netweaver` || `sap-cp-neo` || `sap-cp-cf`
 - `sourcePath`: Path to the folder where your production ready project is
 - `connection`: Connection details to the remote system
@@ -125,6 +126,35 @@ deployer:
       org: myORG
       space: mySPACE
       cliPath: C:\cf-cli\tools
+```
+
+### For projects using ui5.yaml specVersion 2.1 or higher
+
+Projects using ui5.yaml specVersion 2.1 or higher must use the new `customConfiguration` property.
+https://sap.github.io/ui5-tooling/pages/Configuration/#custom-configuration
+
+```yml
+specVersion: '2.1'
+metadata:
+  name: ui5-deployer-app-test
+type: application
+customConfiguration:
+  deployer:
+    type: sap-netweaver
+    sourcePath: dist/ # Path to the project to be deployed
+    connection:
+      url: https://dev.my-sap-server.com
+      strictSSL: false
+    credentials:
+      username: MyUsername
+      password: MyPassword
+    abapRepository:
+      client: 100
+      language: EN
+      transportRequest: ABAPDK999999
+      package: ZMYPACKAGE
+      bspApplication: ZDEPLOYAPP001
+      bspApplicationText: TEST DEPLOY APP x1
 ```
 
 ## Getting Started
