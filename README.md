@@ -128,10 +128,12 @@ deployer:
       cliPath: C:\cf-cli\tools
 ```
 
-### For projects using ui5.yaml specVersion 2.1 or higher
+#### For projects using ui5.yaml specVersion 2.1 or higher
 
 Projects using ui5.yaml specVersion 2.1 or higher must use the new `customConfiguration` property.
 https://sap.github.io/ui5-tooling/pages/Configuration/#custom-configuration
+
+PS: you can also use the `customConfiguration` setup for any other specVersion, but 2.0
 
 ```yml
 specVersion: '2.1'
