@@ -26,13 +26,14 @@
 	"dependencies": {
 		"@ui5/fs": "^2.0.3",
 		"@ui5/logger": "^2.0.0",
+		"dotenv": "^8.2.0",
 		"isbinaryfile": "^4.0.6",
 		"request": "^2.88.2",
 		"ui5-deployer-cli": "2.2.*",
 		"xmldoc": "^1.1.2"
 	},
 	"devDependencies": {
-		"@types/node": "^13.13.15",
+		"@types/node": "^14.6.0",
 		"@types/request": "^2.48.5",
 		"eslint": "^7.7.0",
 		"eslint-config-mlauffer-nodejs": "0.0.1"
