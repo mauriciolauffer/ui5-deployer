@@ -1,6 +1,6 @@
 {
 	"name": "ui5-deployer",
-	"version": "0.2.2",
+	"version": "0.3.0",
 	"description": "UI5 Deployer",
 	"author": "Mauricio Lauffer",
 	"license": "Apache-2.0",
@@ -24,17 +24,18 @@
 		"lint:fix": "eslint lib --fix"
 	},
 	"dependencies": {
-		"@ui5/fs": "^2.0.1",
+		"@ui5/fs": "^2.0.3",
 		"@ui5/logger": "^2.0.0",
+		"dotenv": "^8.2.0",
 		"isbinaryfile": "^4.0.6",
 		"request": "^2.88.2",
 		"ui5-deployer-cli": "2.2.*",
 		"xmldoc": "^1.1.2"
 	},
 	"devDependencies": {
-		"@types/node": "^13.13.5",
-		"@types/request": "^2.48.4",
-		"eslint": "^6.8.0",
+		"@types/node": "^14.6.0",
+		"@types/request": "^2.48.5",
+		"eslint": "^7.7.0",
 		"eslint-config-mlauffer-nodejs": "0.0.1"
 	},
 	"repository": {
