@@ -53,7 +53,7 @@ The ui5.yaml file from your Fiori/UI5 application/library should have a new sect
   - `bspApplication`: BSP Application name
   - `bspApplicationText`: BSP Application description
   - `skipAdtValidations` (optional): Does not validate the existence of some ADT APIs, ABAP packages and Transport Requests used during deployment. Used for older ABAP versions where these ADT APIs are not available. Must be `true` || `false`. Default is `false`.
-  - `appIndexCalculate` (optional):  . Must be `true` || `false`. Default is `false`.
+  - `appIndexCalculate` (optional): Calculation of SAPUI5 Application Index for SAPUI5 Repositories (/UI5/APP_INDEX_CALCULATE). See <https://sapui5.hana.ondemand.com/#/topic/c5e7098474274d3eb7379047ab792f1f>. Must be `true` || `false`. Default is `false`.
 
 ## SAP Netweaver: ABAP server
 
@@ -196,6 +196,20 @@ You can see an example here:
 <https://github.com/mauriciolauffer/ui5-deployer-app-test>
 
 The modified ui5-cli can be found here: <https://github.com/mauriciolauffer/ui5-deployer-cli>
+
+### Support to Environment Variables
+
+The aforementioned properties can also be set via Environment Variables. This option follows the [Twelve-Factor App](http://12factor.net/config) best practices. The tool also supports `.env` files.
+
+The expected Environment Variables are:
+
+```dosini
+UI5_DEPLOYER_USERNAME=MY_SAP_USER
+UI5_DEPLOYER_PASSWORD=MY_SAP_PASSWORD
+UI5_DEPLOYER_ABAP_TR=ABAPDK999999
+```
+
+If you are using `.env` files, do not push them to your git repo as you may expose the secrets to everbody! Make sure to add `.env` to your `.gitignore` file.
 
 ## Build and Test
 
