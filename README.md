@@ -1,8 +1,8 @@
 # Introduction
 
-This is an experimental module integrated with ui5-tooling to deploy Fiori/UI5 apps to SAP environments. This module is under development and it is not part of the official SAP ui5-tooling. For now, it uses a custom version of ui5-cli for deployment capabilities. It's heavily inspired on ui5-build.
+This is a custom module integrated with ui5-tooling to deploy Fiori/UI5 apps to SAP environments. This module is under development and it is not part of the official SAP ui5-tooling. For now, it uses a custom version of ui5-cli for deployment capabilities. It's heavily inspired on ui5-build.
 
-It's an experimental module, don't use it for real! There's no NPM module for it, you consume it from GitHub only.
+Feel free to contribute to the project. PRs are welcome  =)
 
 ## Deploy to
 
@@ -53,6 +53,7 @@ The ui5.yaml file from your Fiori/UI5 application/library should have a new sect
   - `bspApplication`: BSP Application name
   - `bspApplicationText`: BSP Application description
   - `skipAdtValidations` (optional): Does not validate the existence of some ADT APIs, ABAP packages and Transport Requests used during deployment. Used for older ABAP versions where these ADT APIs are not available. Must be `true` || `false`. Default is `false`.
+  - `appIndexCalculate` (optional):  . Must be `true` || `false`. Default is `false`.
 
 ## SAP Netweaver: ABAP server
 
@@ -61,28 +62,30 @@ specVersion: '1.0'
 metadata:
   name: ui5-deployer-app-test
 type: application
-deployer:
-  type: sap-netweaver
-  sourcePath: dist/ # Path to the project to be deployed
-  resources:
-    excludes:
-      - "dist/path_to_excluded/**"
-  connection:
-    url: https://dev.my-sap-server.com
-    proxy: https://my.proxy.com:43000
-    strictSSL: true
-    SSLCertificatePath: /certs/my-ssl-certificate.pem
-  credentials:
-    username: MyUsername
-    password: MyPassword
-  abapRepository:
-    client: 100
-    language: EN
-    transportRequest: ABAPDK999999
-    package: ZMYPACKAGE
-    bspApplication: ZDEPLOYAPP001
-    bspApplicationText: TEST DEPLOY APP x1
-    skipAdtValidations: true
+customConfiguration:
+  deployer:
+    type: sap-netweaver
+    sourcePath: dist/ # Path to the project to be deployed
+    resources:
+      excludes:
+        - "dist/path_to_excluded/**"
+    connection:
+      url: https://dev.my-sap-server.com
+      proxy: https://my.proxy.com:43000
+      strictSSL: true
+      SSLCertificatePath: /certs/my-ssl-certificate.pem
+    credentials:
+      username: MyUsername
+      password: MyPassword
+    abapRepository:
+      client: 100
+      language: EN
+      transportRequest: ABAPDK999999
+      package: ZMYPACKAGE
+      bspApplication: ZDEPLOYAPP001
+      bspApplicationText: TEST DEPLOY APP x1
+      skipAdtValidations: true
+      appIndexCalculate: true
 ```
 
 ## SAP Cloud Platform: NEO environment
@@ -92,18 +95,19 @@ specVersion: '1.0'
 metadata:
   name: ui5-deployer-app-test
 type: application
-deployer:
-  type: sap-cp-neo
-  sourcePath: /dist/*.mtar # Path to the .mtar file to be deployed
-  connection:
-    url: https://hanatrial.ondemand.com
-  credentials:
-    username: MyUsername
-    password: MyPassword
-  sapCloudPlatform:
-    neo:
-      account: myNEO12345Account
-      cliPath: C:\neo-java-web-sdk\tools
+customConfiguration:
+  deployer:
+    type: sap-cp-neo
+    sourcePath: /dist/*.mtar # Path to the .mtar file to be deployed
+    connection:
+      url: https://hanatrial.ondemand.com
+    credentials:
+      username: MyUsername
+      password: MyPassword
+    sapCloudPlatform:
+      neo:
+        account: myNEO12345Account
+        cliPath: C:\neo-java-web-sdk\tools
 ```
 
 ## SAP Cloud Platform: Cloud Foundry environment
@@ -113,22 +117,23 @@ specVersion: '1.0'
 metadata:
   name: ui5-deployer-app-test
 type: application
-deployer:
-  type: sap-cp-cf
-  sourcePath: /dist # Path to the manifest.yml file: https://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html
-  connection:
-    url: https://api.cf.eu10.hana.ondemand.com
-  credentials:
-    username: MyUsername
-    password: MyPassword
-  sapCloudPlatform:
-    cloudFoundry:
-      org: myORG
-      space: mySPACE
-      cliPath: C:\cf-cli\tools
+customConfiguration:
+  deployer:
+    type: sap-cp-cf
+    sourcePath: /dist # Path to the manifest.yml file: https://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html
+    connection:
+      url: https://api.cf.eu10.hana.ondemand.com
+    credentials:
+      username: MyUsername
+      password: MyPassword
+    sapCloudPlatform:
+      cloudFoundry:
+        org: myORG
+        space: mySPACE
+        cliPath: C:\cf-cli\tools
 ```
 
-#### For projects using ui5.yaml specVersion 2.1 or higher
+### For projects using ui5.yaml specVersion 2.1 or higher
 
 Projects using ui5.yaml specVersion 2.1 or higher must use the new `customConfiguration` property.
 https://sap.github.io/ui5-tooling/pages/Configuration/#custom-configuration
@@ -159,6 +164,14 @@ customConfiguration:
       bspApplicationText: TEST DEPLOY APP x1
 ```
 
+## Installing
+
+Install ui5-deployer as a devDependency in your project.json
+
+```shell script
+$ npm i --save-dev ui5-deployer
+```
+
 ## Getting Started
 
 Pick one of the remote systems above and edit your ui5.yaml file according to it.
@@ -182,9 +195,7 @@ $ ui5-deployer deploy --username=MyUsername --password=MyPassword
 You can see an example here:
 <https://github.com/mauriciolauffer/ui5-deployer-app-test>
 
-The modified ui5-cli can be found here: <https://github.com/mauriciolauffer/ui5-cli-deployer>
-
-TODO: Needs more details
+The modified ui5-cli can be found here: <https://github.com/mauriciolauffer/ui5-deployer-cli>
 
 ## Build and Test
 
