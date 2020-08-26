@@ -53,7 +53,7 @@ The ui5.yaml file from your Fiori/UI5 application/library should have a new sect
   - `bspApplication`: BSP Application name
   - `bspApplicationText`: BSP Application description
   - `skipAdtValidations` (optional): Does not validate the existence of some ADT APIs, ABAP packages and Transport Requests used during deployment. Used for older ABAP versions where these ADT APIs are not available. Must be `true` || `false`. Default is `false`.
-  - `appIndexCalculate` (optional): Calculation of SAPUI5 Application Index for SAPUI5 Repositories (/UI5/APP_INDEX_CALCULATE). See <https://sapui5.hana.ondemand.com/#/topic/c5e7098474274d3eb7379047ab792f1f>. Must be `true` || `false`. Default is `false`.
+  - `appIndexCalculate` (optional): Calculation of SAPUI5 Application Index for SAPUI5 Repositories (/UI5/APP_INDEX_CALCULATE). See [SAPUI5 Application Index](https://sapui5.hana.ondemand.com/#/topic/c5e7098474274d3eb7379047ab792f1f). Must be `true` || `false`. Default is `false`.
 
 ## SAP Netweaver: ABAP server
 
