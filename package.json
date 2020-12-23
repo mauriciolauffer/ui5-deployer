@@ -24,18 +24,20 @@
 		"lint:fix": "eslint lib --fix"
 	},
 	"dependencies": {
-		"@ui5/fs": "^2.0.3",
-		"@ui5/logger": "^2.0.0",
+		"@ui5/fs": "^2.0.6",
+		"@ui5/logger": "^2.0.1",
 		"dotenv": "^8.2.0",
+		"got": "^11.8.1",
+		"install": "^0.13.0",
 		"isbinaryfile": "^4.0.6",
-		"request": "^2.88.2",
-		"ui5-deployer-cli": "2.2.*",
+		"npm": "^6.14.10",
+		"tough-cookie": "^4.0.0",
+		"ui5-deployer-cli": "^2.2.*",
 		"xmldoc": "^1.1.2"
 	},
 	"devDependencies": {
-		"@types/node": "^14.6.0",
-		"@types/request": "^2.48.5",
-		"eslint": "^7.7.0",
+		"@types/node": "^14.14.14",
+		"eslint": "^7.16.0",
 		"eslint-config-mlauffer-nodejs": "0.0.1"
 	},
 	"repository": {
