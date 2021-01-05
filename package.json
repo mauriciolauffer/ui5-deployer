@@ -4,9 +4,14 @@
 	"description": "UI5 Deployer",
 	"author": "Mauricio Lauffer",
 	"license": "Apache-2.0",
-	"main": "lib/index.js",
+	"bin": {
+		"ui5-deployer": "./bin/ui5-deployer.js"
+	},
+	"main": "index.js",
 	"files": [
-		"lib/**"
+		"bin/**",
+		"lib/**",
+		"index.js"
 	],
 	"keywords": [
 		"openui5",
@@ -20,25 +25,27 @@
 	],
 	"scripts": {
 		"test": "npm run lint",
-		"lint": "eslint lib",
-		"lint:fix": "eslint lib --fix"
+		"lint": "eslint .",
+		"lint:fix": "eslint . --fix"
 	},
 	"dependencies": {
 		"@ui5/fs": "^2.0.6",
 		"@ui5/logger": "^2.0.1",
+		"@ui5/project": "^2.2.4",
 		"dotenv": "^8.2.0",
 		"got": "^11.8.1",
+		"import-local": "^3.0.2",
 		"install": "^0.13.0",
 		"isbinaryfile": "^4.0.6",
-		"npm": "^6.14.10",
+		"js-yaml": "^4.0.0",
 		"tough-cookie": "^4.0.0",
-		"ui5-deployer-cli": "^2.2.*",
-		"xmldoc": "^1.1.2"
+		"xmldoc": "^1.1.2",
+		"yargs": "^16.2.0"
 	},
 	"devDependencies": {
-		"@types/node": "^14.14.14",
-		"eslint": "^7.16.0",
-		"eslint-config-mlauffer-nodejs": "0.0.1"
+		"@types/node": "^14.14.20",
+		"eslint": "^7.17.0",
+		"eslint-config-mlauffer-nodejs": "^0.0.1"
 	},
 	"repository": {
 		"type": "git",
