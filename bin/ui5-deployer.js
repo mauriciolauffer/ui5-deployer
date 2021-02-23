@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
+/* eslint-disable */
 'use strict';
 
 // The following block should be compatible to as many Node.js versions as possible

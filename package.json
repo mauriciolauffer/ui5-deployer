@@ -1,11 +1,11 @@
 {
 	"name": "ui5-deployer",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "UI5 Deployer",
 	"author": "Mauricio Lauffer",
 	"license": "Apache-2.0",
 	"bin": {
-		"ui5-deployer": "./bin/ui5-deployer.js"
+		"ui5-deployer": "bin/ui5-deployer.js"
 	},
 	"main": "index.js",
 	"files": [
