@@ -207,6 +207,7 @@ The expected Environment Variables are:
 UI5_DEPLOYER_USERNAME=MY_SAP_USER
 UI5_DEPLOYER_PASSWORD=MY_SAP_PASSWORD
 UI5_DEPLOYER_ABAP_TR=ABAPDK999999
+UI5_DEPLOYER_NEO_CLIPATH=/path/to/neo/cli/
 ```
 
 If you are using `.env` files, do not push them to your git repo as you may expose the secrets to everbody! Make sure to add `.env` to your `.gitignore` file.
