@@ -178,7 +178,7 @@ Pick one of the remote systems above and edit your ui5.yaml file according to it
 
 You have the option to use all parameters as is from the ui5.yaml file or overwrite few of them when executing ui5-cli.
 
-You can overwrite: `abapRepository.transportRequest` || `credentials.username` || `credentials.password`
+You can overwrite: `abapRepository.transportRequest` || `credentials.username` || `credentials.password` || `sapCloudPlatform.cloudFoundry.space`
 
 ```shell script
 $ ui5-deployer deploy
@@ -190,6 +190,10 @@ $ ui5-deployer deploy --transport-request=ABAPDK99999
 
 ```shell script
 $ ui5-deployer deploy --username=MyUsername --password=MyPassword
+```
+
+```shell script
+$ ui5-deployer deploy --space=dev
 ```
 
 You can see an example here:
@@ -208,6 +212,7 @@ UI5_DEPLOYER_USERNAME=MY_SAP_USER
 UI5_DEPLOYER_PASSWORD=MY_SAP_PASSWORD
 UI5_DEPLOYER_ABAP_TR=ABAPDK999999
 UI5_DEPLOYER_NEO_CLIPATH=/path/to/neo/cli/
+UI5_DEPLOYER_CF_SPACE=dev
 ```
 
 If you are using `.env` files, do not push them to your git repo as you may expose the secrets to everbody! Make sure to add `.env` to your `.gitignore` file.
