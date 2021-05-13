@@ -8,7 +8,7 @@ Feel free to contribute to the project. PRs are welcome  =)
 
 You should be able to deploy to:
 
-- SAP Netweaver: ABAP server
+- SAP Netweaver: ABAP server (via OData or ADT)
 - SAP Cloud Platform: NEO environment
 - SAP Cloud Platform: Cloud Foundry environment
 
@@ -52,6 +52,7 @@ The ui5.yaml file from your Fiori/UI5 application/library should have a new sect
   - `package`: ABAP Package
   - `bspApplication`: BSP Application name
   - `bspApplicationText`: BSP Application description
+  - `method`: `adt` || `odata`. Default is `adt`. ADT API endpoint is `/sap/bc/adt`. OData API endpoint is `/sap/opu/odata/UI5/ABAP_REPOSITORY_SRV`. ADT is the default to avoid breaking old projects. However, OData is recommended for better performance, it doesn't send multiples files, it sends just a single ***.zip** containing the whole project.
   - `skipAdtValidations` (optional): Does not validate the existence of some ADT APIs, ABAP packages and Transport Requests used during deployment. Used for older ABAP versions where these ADT APIs are not available. Must be `true` || `false`. Default is `false`.
   - `appIndexCalculate` (optional): Calculation of SAPUI5 Application Index for SAPUI5 Repositories (/UI5/APP_INDEX_CALCULATE). See [SAPUI5 Application Index](https://sapui5.hana.ondemand.com/#/topic/c5e7098474274d3eb7379047ab792f1f). Must be `true` || `false`. Default is `false`.
 
@@ -84,6 +85,7 @@ customConfiguration:
       package: ZMYPACKAGE
       bspApplication: ZDEPLOYAPP001
       bspApplicationText: TEST DEPLOY APP x1
+      method: odata
       skipAdtValidations: true
       appIndexCalculate: true
 ```

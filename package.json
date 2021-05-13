@@ -32,7 +32,8 @@
 		"@ui5/fs": "^2.0.6",
 		"@ui5/logger": "^2.0.1",
 		"@ui5/project": "^2.3.1",
-		"dotenv": "^8.6.0",
+		"archiver": "^5.3.0",
+		"dotenv": "^9.0.2",
 		"got": "^11.8.2",
 		"import-local": "^3.0.2",
 		"install": "^0.13.0",
@@ -40,10 +41,10 @@
 		"js-yaml": "^4.1.0",
 		"tough-cookie": "^4.0.0",
 		"xmldoc": "^1.1.2",
-		"yargs": "^16.2.0"
+		"yargs": "^17.0.1"
 	},
 	"devDependencies": {
-		"@types/node": "^14.14.44",
+		"@types/node": "^14.14.45",
 		"eslint": "^7.26.0",
 		"eslint-config-mlauffer-nodejs": "^0.0.1"
 	},
