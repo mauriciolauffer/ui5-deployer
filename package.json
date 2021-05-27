@@ -1,6 +1,6 @@
 {
 	"name": "ui5-deployer",
-	"version": "1.1.0",
+	"version": "1.1.1",
 	"description": "UI5 Deployer",
 	"author": "Mauricio Lauffer",
 	"license": "Apache-2.0",
@@ -37,6 +37,7 @@
 		"got": "^11.8.2",
 		"import-local": "^3.0.2",
 		"install": "^0.13.0",
+		"isbinaryfile": "^4.0.8",
 		"js-yaml": "^4.1.0",
 		"tough-cookie": "^4.0.0",
 		"xmldoc": "^1.1.2",
