@@ -5,5 +5,5 @@
  * @private
  */
 module.exports = {
-  init: require('./lib/cli/init/init').init,
+  init: require('./lib/cli/init/init').init
 };
