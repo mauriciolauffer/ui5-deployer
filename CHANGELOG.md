@@ -1,5 +1,12 @@
 # Changelog
 
+### [0.4.1](https://github.com/mauriciolauffer/ui5-deployer/compare/v0.4.0...v0.4.1) (2022-04-25)
+
+
+### Bug Fixes
+
+* Improve error log + add node v12 support ([6b9e384](https://github.com/mauriciolauffer/ui5-deployer/commit/6b9e38409df2b75e2b7ccab683dfc70c6cd51d1b))
+
 ## [0.4.0](https://github.com/mauriciolauffer/ui5-deployer/compare/v0.3.0...v0.4.0) (2022-04-22)
 
 
