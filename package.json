@@ -31,8 +31,8 @@
 	"dependencies": {
 		"@ui5/fs": "^2.0.6",
 		"@ui5/logger": "^2.0.1",
-		"@ui5/project": "^2.6.0",
-		"archiver": "^5.3.1",
+		"@ui5/project": "^3.0.0",
+		"archiver": "^7.0.0",
 		"dotenv": "^16.0.0",
 		"got": "^11.8.3",
 		"import-local": "^3.1.0",
